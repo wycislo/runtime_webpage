@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RunTime Terror!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/playerpos">Player Evaluation</a>
+        <a href="/draftcard">Draft Card</a>
+        <a href="/predmodel">Predictive Model QB</a>
+        <a href="/wrpredmodel">Predictive Model WR</a>
+        <a href="/rbpredmodel">Predictive Model RB</a>
+      </div>
+
+
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <h1>RunTime Terror Fantasy Football</h1>
+            <p>Evaluate your player!</p>
+            <p><img class="panel" src="/static/images/fantasyfootball.png" style="width:250px;" alt="Fantasy Football"> </p>
+        </div>
+
+        <div class="row">
+            Site Purpose: <br>
+Provide Fantasy Football Enthusiasts tools to view, draft and predict players season scores. We used a variety of tools to provide users comprehensive data to evaluate players. Technologies used were Python, Pandas, Tableau, SQL Postgres, CSS, HTML and Heroku. 
+Our Tableau dashboards consist of player performances for the 2021 season. You will be able to view Total points earned, passing percentages, rushing and receiving stats. Also, with the 2021 data we created a 2022 draft dashboard to help assist with identify potentially undervalued and over valued players. 
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <br>
+App Development: <br> 
+Anderson Igben <br>
+John Burke <br>
+Henry Wycislo <br>
+Mason MA <br>
+Stanislav Kuzmin <br>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="box">
+                    <h3 class="title">APP Powered By</h3>
+                    <hr>
+                    <div class="container">
+                        <div class="row" >
+                            <div class="col-6  img_col">
+                                <div class="title">CSS&HTML</div>
+
+                                <img class="panel" src="/static/images/csshtml.jpg" alt="CSS HTML">
+                                </a>
+                            </div>
+                            <div class="col-6 img_col" >
+                                <div class="title">Python</div>
+
+                                <img class="panel" src="/static/images/python.jpg" alt="Python">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 img_col" >
+                                <div class="title">Pandas</div>
+
+                                <img class="panel" src="/static/images/pandas.jpg" alt="Pandas">
+                                </a>
+                            </div>
+                            <div class="col-6 img_col" >
+                                <div class="title">Postgres SQL</div>
+
+                                <img class="panel" src="/static/images/psql.jpg"  alt="psql">
+                                </a>
+                            </div>
+                            <br>
+                        <div class="row">
+                            <div class="col-6 img_col">
+                                <div class="title">Heroku</div>
+
+                                <img class="panel" src="/static/images/heroku8748.jpg" alt="Heroku">
+                                </a>
+                            </div>
+                            <div class="col-6 img_col">
+                                <div class="title">Machine Learning</div>
+
+                                <img class="panel" src="/static/images/Machine_Learning_Logo.png"  alt="Machine Learning">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

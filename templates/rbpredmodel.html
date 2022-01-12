@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RunTime Terror!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/playerpos">Player Evaluation</a>
+        <a href="/draftcard">Draft Card</a>
+        <a href="/predmodel">Predictive Model QB</a>
+        <a href="/wrpredmodel">Predictive Model WR</a>
+        <a href="/rbpredmodel">Predictive Model RB</a>
+      </div>
+
+
+    <div class="container">
+       
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <form method="POST" action="/rbpredmodel" role="form", name="playerform">
+                    <div class="form-group">
+                        <label for="inputPlayerRushattempts">How many times did this player Rush Attempt?</label>
+                        <input type="text" class="form-control" id="inputPlayerRushattempts" name="PlayerRushattempts" placeholder="Rushattempts">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPlayerRushyards">How many yards did this player Rush?</label>
+                        <input type="text" class="form-control" id="inputPlayerRushyards" name="PlayerRushyards" placeholder="Rushyards">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPlayerRecyardspertd">What is the Player Receiving Yards per TD this season?</label>
+                        <input type="text" class="form-control" id="inputPlayerRecyardspertd" name="PlayerRecyardspertd" placeholder="Recyardspertd">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPlayerFumble">How many times did this Player Fumble this season?</label>
+                        <input type="text" class="form-control" id="inputPlayerFumble" name="PlayerFumble" placeholder="Fumble">
+                    </div>
+                    <input type="submit" value="submit" class="btn btn-default">
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-9">
+                <div id="table-area" class="">
+                  <table id="player-table" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th class="table-head">Rush Attempts</th>
+                        <th class="table-head">Rush Yards</th>
+                        <th class="table-head">Rec Yards per TD</th>
+                        <th class="table-head">Fumble</th>
+                        <th class="table-head">Predicted Score</th>
+                      </tr>
+                      <tr>
+                        <td>{{result.rushattempts}}</td>
+                        <td>{{result.rushyards}}</td>
+                        <td>{{result.recyardspertd}}</td>
+                        <td>{{result.fumble}}</td>
+                        <td>{{result.score}}</td>
+                      </tr>
+                    </thead>
+                    <tbody id="player_table_body"></tbody>
+                  </table>
+                </div>
+              </div>
+        </div>
+
+   
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
